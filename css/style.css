@@ -1,0 +1,56 @@
+.main-wrapper {
+    width: 50%;
+    overflow: hidden;
+    height: 300px;
+}
+
+.block {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+
+.block {
+    animation-name: lateral;
+    animation-duration: 1s;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate;
+
+
+    transition-property: margin-top;
+    transition-timing-function: linear;
+}
+
+@keyframes lateral {
+
+    0% {
+        margin-top: 200px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+.arrow  {
+    border: solid black;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 100px;
+    height: 100px;
+    transition : border-color 0.5s ease-in-out;
+}
+.arrow:hover {
+    border-color: coral;
+    cursor: pointer;
+}
+
+.right {
+    transform: rotate(-45deg);
+    transition : transform 0.5s ease-in-out;
+}
+
+.right:hover {
+    transform: rotate(45deg);
+}
